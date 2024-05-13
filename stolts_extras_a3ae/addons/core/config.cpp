@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QDOUBLES(PREFIX,core)};
+        requiredAddons[] = {"A3A_core"};
         author = AUTHOR;
         authors[] = { AUTHORS };
         authorUrl = "";
@@ -14,13 +14,7 @@ class CfgPatches {
     };
 };
 
-//the pre proccessor ifs are there to make sure we overwrite/add to the correct config
 class A3A {
-#if __A3_DEBUG__
-    #include "CfgFunctions.hpp"
-#endif
+    #include "Params.hpp"
+
 };
-#if __A3_DEBUG__
-#else
-    #include "CfgFunctions.hpp"
-#endif
